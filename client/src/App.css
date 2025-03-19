@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.note-item{
+  position:relative;
+  margin-top: 1rem;
+}
+
+.note-item svg{
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  right: 0;
+}
