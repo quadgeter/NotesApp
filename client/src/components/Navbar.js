@@ -14,6 +14,7 @@ const Navbar = () => {
         <nav style={{ display: "flex", gap: "15px", padding: "10px", borderBottom: "1px solid #ccc" }}>
             <Link to="/">Home</Link>
             <Link to="/notes">Notes</Link>
+            <Link to="/collaborate">Collaborate</Link>
             {token ? (
                 <button onClick={handleLogout}>Logout</button>
             ) : (
@@ -21,7 +22,7 @@ const Navbar = () => {
                     <Link to="/login">Login</Link>
                     <Link to="/Register">Register</Link>
                 </>
-            )}
+            )}   
         </nav>
     );
 };

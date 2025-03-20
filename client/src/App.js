@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
@@ -7,21 +7,26 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Notes from "./pages/Notes"
-
-console.log("Register component is being imported");
+import Collaborate from "./pages/Collaborate"
+import { SocketProvider } from "./context/SocketContext";
+import useSocket from "./context/SocketContext";
 
 function App() {
+
     return (
-      
-        <BrowserRouter>
-        <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/notes" element={<Notes />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-            </Routes>
-        </BrowserRouter>
+        <SocketProvider>
+            <BrowserRouter>
+            <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/notes" element={<Notes />} />
+                    <Route path="/collaborate" element={<Collaborate />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                </Routes>
+            </BrowserRouter>
+        </SocketProvider>
+        
     );
 }
 

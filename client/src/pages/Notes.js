@@ -78,7 +78,7 @@ export default function Notes() {
     return (
         <section style={{ margin: "1rem" }}>
             <form onSubmit={ handleCreateNote }>
-                <h1>New Note</h1>
+                <h1>Notes</h1>
                 <input style={{ marginRight: "0.5rem"}} type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
                 <input style={{ marginRight: "0.5rem"}} type="text" placeholder="Body" value={body} onChange={(e) => setBody(e.target.value)} required />
                 <button type="submit">Save</button>
